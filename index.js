@@ -1,7 +1,7 @@
 const fs = require('fs');
 const crypt = require('crypto');
 
-const stream = fs.createWriteStream("original_targeting.tsv");
+const stream = fs.createWriteStream(process.argv[3]);
 
 stream.once('open', function(fd) {
 	length = process.argv[2];
